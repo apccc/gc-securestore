@@ -1,4 +1,6 @@
 #!/bin/bash
+#run the auto snapshot bucket process
+
 echo "Auto Snapshotting Buckets into Secure Store!"
 CURRENT_DIR=`dirname "$0"`
 if [ ! -f "~/gc-securestore-config.sh" ];then
