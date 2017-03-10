@@ -26,6 +26,8 @@ for SOURCE_BUCKET in `echo "$SOURCE_BUCKETS"`;do
   echo "WEEK TARGET BUCKET: $WEEK_TARGET_BUCKET"
   gsutil mb -p "$PROJECTID" -c "$STORAGE_CLASS" -l "$STORAGE_LOCATION" "gs://$MONTH_TARGET_BUCKET"
   gsutil mb -p "$PROJECTID" -c "$STORAGE_CLASS" -l "$STORAGE_LOCATION" "gs://$WEEK_TARGET_BUCKET"
+  gsutil -m rsync -d -r "gs://$SOURCE_BUCKET" "gs://$MONTH_TARGET_BUCKET"
+  gsutil -m rsync -d -r "gs://$SOURCE_BUCKET" "gs://$WEEK_TARGET_BUCKET"
   echo ""
 done
 echo "Done auto snapshotting!"
