@@ -3,7 +3,7 @@
 
 echo "Auto Snapshotting Buckets into Secure Store!"
 CURRENT_DIR=`dirname "$0"`
-if [ ! -f "~/gc-securestore-config.sh" ];then
+if [ ! -f ~/gc-securestore-config.sh ];then
   touch ~/gc-securestore-config.sh
   chmod 600 ~/gc-securestore-config.sh
   cp "$CURRENT_DIR/gc-securestore-config-template.sh" ~/gc-securestore-config.sh
