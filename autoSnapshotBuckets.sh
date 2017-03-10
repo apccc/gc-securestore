@@ -14,5 +14,7 @@ fi
 source ~/gc-securestore-config.sh
 for SOURCE_BUCKET in `echo "$SOURCE_BUCKETS"`;do
   echo "SOURCE BUCKET: $SOURCE_BUCKET"
+  MM=$(date +%m)
+  W=$(($((7+$(date +%-d)))/7))
 done
 exit 0
