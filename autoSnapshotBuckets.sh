@@ -10,4 +10,9 @@ if [ ! -f ~/gc-securestore-config.sh ];then
   echo "Please setup config file! ~/gc-securestore-config.sh"
   exit
 fi
+
+source ~/gc-securestore-config.sh
+for SOURCE_BUCKET in `echo "$SOURCE_BUCKETS"`;do
+  echo "SOURCE BUCKET: $SOURCE_BUCKET"
+done
 exit 0
