@@ -7,7 +7,7 @@ CURRENT_DIR=`dirname "$0"`
 if [ ! -f ~/gc-securestore-config.sh ];then
   cp "$CURRENT_DIR/gc-securestore-config-template.sh" ~/gc-securestore-config.sh
   echo "Please setup config file! ~/gc-securestore-config.sh"
-  exit
+  exit 1
 fi
 
 source ~/gc-securestore-config.sh
