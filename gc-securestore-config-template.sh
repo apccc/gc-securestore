@@ -4,3 +4,5 @@
 #space separated list of source buckets to backup
 #(local computer instance service account will need at least read only/viewer permission to project/buckets)
 SOURCE_BUCKETS=""
+STORAGE_CLASS="DURABLE_REDUCED_AVAILABILITY"
+STORAGE_LOCATION="US"
