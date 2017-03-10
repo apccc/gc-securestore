@@ -19,8 +19,8 @@ for SOURCE_BUCKET in `echo "$SOURCE_BUCKETS"`;do
   MM=$(date +%m)
   W=$(($((7+$(date +%-d)))/7))
 
-  MONTH_TARGET_BUCKET=`echo "${STORE_PREFIX}-M${MM}-${SOURCE_BUCKET}" | cut -c 1-63`
-  WEEK_TARGET_BUCKET=`echo "${STORE_PREFIX}-W${W}-${SOURCE_BUCKET}" | cut -c 1-63`
+  MONTH_TARGET_BUCKET=`echo "${STORE_PREFIX}-m${MM}-${SOURCE_BUCKET}" | cut -c 1-63`
+  WEEK_TARGET_BUCKET=`echo "${STORE_PREFIX}-w${W}-${SOURCE_BUCKET}" | cut -c 1-63`
 
   echo "MONTH TARGET BUCKET: $MONTH_TARGET_BUCKET"
   echo "WEEK TARGET BUCKET: $WEEK_TARGET_BUCKET"
